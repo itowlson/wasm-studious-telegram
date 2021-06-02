@@ -28,7 +28,6 @@ jobs:
         openssl x509 -in ./certs/lets-encrypt-r3.pem -inform PEM -out ./certs/lets-encrypt-r3.crt
         wget https://letsencrypt.org/certs/lets-encrypt-e1.pem -q -O ./certs/lets-encrypt-e1.pem
         openssl x509 -in ./certs/lets-encrypt-e1.pem -inform PEM -out ./certs/lets-encrypt-e1.crt
-        sudo mkdir /usr/local/share/ca-certificates
         sudo cp ./certs/lets-encrypt-r3.crt /usr/local/share/ca-certificates/
         sudo cp ./certs/lets-encrypt-e1.crt /usr/local/share/ca-certificates/
         sudo update-ca-certificates
